@@ -1,27 +1,185 @@
-/* header{
-    width:105%;
-    height: 105px;
-    position: relative;
-    z-index: 100;
-    background-color:#a8a8a8;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    right: 7px;
-} */
 body{
-    padding: 0;
-    margin:0;
     direction: rtl;
-    
+    font-family: 'Arial (Hebrew)', Arial; 
+    padding-bottom: 38px; 
+    background: #fff url("./../assets/header_bg.png") repeat-x center top;
 }
 
-header{
-    display: flex;
+#container{
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+#nav{
     position: relative;
     min-height: 105px;
     min-width: 100%;
-    background-color:#a8a8a8;
+    z-index: 100;
 }
+
+#nav a.logo{
+    display: block;
+    width: 142px;
+    height: 93px;
+    position: absolute;
+    bottom: -20px;
+    right: -8px;
+    background: url("./../assets/paz_logo.png") no-repeat 0 0;
+}
+
+#nav #searchBox{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 152px;
+}
+
+#nav #searchBox .input{
+    float: right;
+    width: 132px;
+    height: 19px;
+    background: url("./../assets/search_input.png") no-repeat 0 0;
+}
+
+#nav #searchBox .input input[type="text"]{
+    position: relative;
+    top: 2px;
+    right: 4px;
+    width: 126px;
+    background: transparent;
+    border: 0 none;
+}
+
+#nav #searchBox a{
+    display: inline-block;
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: url("./../assets/search_button.png");
+}
+
+#nav #searchBox a:hover {
+     text-decoration: none; 
+}
+
+#nav #langmenu {
+     position: absolute; top: 5px; left: 180px; 
+    }
+#nav #langmenu li{
+    list-style: none;
+}
+#nav #langmenu a{ 
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+#nav #mainMenu { 
+    height: 33px; 
+    position: relative; 
+    top: 72px; 
+    margin: 0 143px 0 0; 
+}
+
+.fc{
+    display: block;
+}
+
+*{
+    padding: 0;
+}
+
+ol ul li{
+    list-style: none;
+}
+
+#nav #mainMenu li { 
+    height: 100%; 
+    float: right; 
+    position: relative; 
+    display: block; 
+}
+#nav #mainMenu li.sep { 
+    width: 4px; 
+    height: 21px; 
+    background: url("./../assets/menu_sep.png") no-repeat 0 0px; 
+    margin: 0 16px; 
+}
+#nav #mainMenu li a.home { 
+    width: 17px; 
+    background: url("./../assets/menu_home_blue.png") no-repeat 0 top; 
+}
+/* #nav #mainMenu li a.home:hover, #nav #mainMenu li a.home.selectednode { background-position: -17px top; } */
+#nav #mainMenu li a { 
+    display: inline-block; 
+    color: #fff; 
+    font-size: 15px; 
+    font-weight: bold; 
+    height: 100%; 
+}
+#nav #mainMenu li a:hover, #nav #mainMenu li a.selectednode { 
+    color: #005ca0; 
+}
+#nav #mainMenu li ul { 
+    position:absolute; 
+    z-index: 200; 
+    top: 33px; 
+    right: 0; 
+    display: none; 
+    background: #909090; 
+    background: url("./../assets/menu_dropdown_bg.png");
+}
+#nav #mainMenu li:hover ul { 
+    display: block; 
+}
+#nav #mainMenu li ul li {
+    float: none; 
+    padding: 0 5px;
+}
+*+html #nav #mainMenu li ul li { 
+    width: 220px; 
+    overflow: hidden; 
+}
+#nav #mainMenu li ul li:hover { 
+    background-color: #bcbcbc; 
+    display: block;
+}
+#nav #mainMenu li ul li a { 
+    display: block;
+    width: 100%; 
+    height: 100%;
+    padding: 5px 0;
+    white-space: nowrap;
+} 
+#nav #mainMenu li ul li a:hover { 
+    color: #005ca0; 
+    width: 100%;
+}
+#nav #mainMenu li ul li a span { 
+    display: block; 
+    width: 100%;
+}
+#nav #mainMenu li ul li.sep { 
+    width: 100%; 
+    *display: inline; 
+    zoom: 1; 
+    padding: 0px; 
+    margin: 0px; 
+    height: 1px; 
+    background: url("./../assets/menu_dropdown_sep.png") repeat-x 0 0; 
+}
+*+html #nav #mainMenu li ul li.sep { 
+    width: 220px; 
+    height: 1px; 
+    padding: 0; 
+    margin: 0; 
+    line-height: 1;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+
 
 footer{
     display: flex;
@@ -29,7 +187,7 @@ footer{
     min-height: 38px;
     position: fixed;
     bottom: 0px;
-    background-color: #a8a8a8;
+    background-color: #bcbcbc;
 }
 
 .tab-container{
