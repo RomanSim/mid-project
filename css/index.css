@@ -1,8 +1,9 @@
 body{
     direction: rtl;
     font-family: 'Arial (Hebrew)', Arial; 
-    padding-bottom: 38px; 
+    padding-bottom: 38px;
     background: #fff url("./../assets/header_bg.png") repeat-x center top;
+    display: flex; 
 }
 
 #container{
@@ -66,7 +67,7 @@ body{
 }
 
 #nav #langmenu {
-     position: absolute; top: 5px; left: 180px; 
+     position: absolute; top: 20px; left: 180px; 
     }
 #nav #langmenu li{
     list-style: none;
@@ -90,6 +91,7 @@ body{
 
 *{
     padding: 0;
+    margin: 0;
 }
 
 ol ul li{
@@ -182,6 +184,15 @@ a {
     outline: none;
 }
 /* tabs */
+.all-tabs{
+    margin-top: 30px;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
 .tab-container{
     height: 25em;
     width:50%;
@@ -194,34 +205,93 @@ a {
 .tab-item{
     width: 200px;
     margin: 10px;
-    border: 3px solid black;
+    border: 1px transparent white;
     
 }
 
-.item-1{
+.all-tabs .item {
     position: relative;
-    min-width: 18em;
-    min-height: 22em;
+    min-width: 293px;
+    min-height: 355px;
+    z-index: 10;
+    /* background: url("./../assets/1908364606615453350.JPG") repeat-x 0 0; */
     border-bottom-right-radius: 10%;
 }
-.item-2{
+
+.all-tabs .item.margins { 
+    margin: 0 10px; 
+}
+.all-tabs .item img.overlay { 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+}
+
+.all-tabs .item div.text { 
+    width: 228px; 
+    height: 77px; 
+    overflow: hidden; 
+    padding: 10px; 
+    position: absolute; 
+    left: 38px; 
+    bottom: 6px; 
+    color: #fff; 
+    background: url("./../assets/hp_tab_text_bg.png") no-repeat 0 0; 
+}
+.all-tabs .item div.text h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+.all-tabs .item div.text p{
+    font-size: 13px;
+    position: relative;
+    bottom: 3px;
+    margin-top: 2px;
+}
+
+.all-tabs .item div.text a.readMore{
+    float: left;
+    position: relative;
+    color: white;
+    bottom: 12px;
+}
+
+a.readMore { 
+    font-size: 13px; 
+    text-decoration: underline; 
+}
+a.readMore.white { 
+    background: url("./../assets/read_more_white.png") no-repeat left center; 
+}
+a.readMore:hover { 
+    background: url("./../assets/read_more_blue.png") no-repeat left center; 
+}
+a.readMore span { 
+    padding-left: 12px; 
+}
+*+html a.readMore span { 
+    padding-right: 12px; 
+}
+
+/* 
+.item-2{ 
     position: relative;
     min-width: 18em;
     min-height: 22em;
+    z-index: 10;
+    background: url("./../assets/Picture-046410251500.jpg") repeat-x 0 0;
     border-bottom-right-radius: 10%;
 }
 .item-3{
     position: relative;
     min-width: 18em;
     min-height: 22em;
+    z-index: 10;
+    background: url("./../assets/פזקר_-291_354410564000.jpg") repeat-x 0 0;
     border-bottom-right-radius: 10%;
-}
+} */
 
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
+
 
 .cube-container{
     position: relative;
@@ -238,9 +308,8 @@ a {
     margin: 10px;
     position: relative;
     bottom: 42%;
-    border: 3px solid black;
-    background-color: whitesmoke;
-    
+    border: 1px solid silver;
+    background-color: whitesmoke !important; 
 }
 
 .cube-1{
@@ -248,21 +317,111 @@ a {
     min-width: 240px;
     min-height: 216px;
     padding: 0 24px;
+    background: url("./../assets/paz_250x110059890678.jpg") no-repeat center;
     border-top-right-radius: 10%;
 }
+
+.cube-1 > h3{
+    font-size: 14px;
+    padding-top: 10px;
+    position: absolute;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid lightgray;
+}
+
+.cube-1 .details a {
+    margin-top: 185px; 
+    float:left;
+    color: grey;
+    font-size: 14px;
+}
+.cube-1 .details a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.cube-1 .details img{
+    margin-top: 185px;
+    position: absolute;
+    left: 13px;
+    bottom: 18px;
+}
+
 .cube-2{
     position: relative;
     min-width: 240px;
-    min-height: 216px;
+    height: 216px;
     padding: 0 24px;
     border-top-right-radius: 10%;
 }
+
+.cube-2 .bannerContent > h3{
+    font-size: 14px;
+    padding-top: 10px;
+    position: absolute;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid lightgray;
+}
+
+.cube-2 .bannerContent img{
+    position: relative;
+    top: 50px;
+    left: 5px;
+}
+
+.cube-2 .details a {
+    margin-top: 70px; 
+    float:left;
+    color: grey;
+    font-size: 14px;
+}
+.cube-2 .details a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.cube-2 .details img{
+    margin-top: 185px;
+    position: absolute;
+    left: 13px;
+    bottom: 18px;
+}
+
 .cube-3{
     position: relative;
     min-width: 240px;
     min-height: 216px;
     padding: 0 24px;
     border-top-right-radius: 10%;
+}
+
+.cube-3 > h3{
+    font-size: 14px;
+    padding-top: 10px;
+    position: absolute;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid lightgray;
+}
+
+.cube-3 > img{
+    position: relative;
+    float: left;
+    top:45px;
+}
+
+a.readMore.yellow { 
+    background: url("./../assets/read_more_yellow.png") no-repeat left center; 
+}
+a.readMore:hover { 
+    background: url("./../assets/read_more_blue.png") no-repeat left center; 
+}
+
+
+.text-cube{
+    position: relative;
+    display: block;
+    top: 55px;
 }
 
 .cube-wrapper{
@@ -279,12 +438,13 @@ a {
     position: fixed; 
     z-index: 999999; 
     bottom: 0px; 
+    display: flex;
     background: url("./../assets/footer_bg.png") repeat-x 0 0; 
 }
 #footer .container { 
     width: 900px; 
     height: 100%; 
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 #footer .menu { 
     font-size: 14px; 
